@@ -40,12 +40,23 @@ When you run it, you'll want to make port 443 available, e.g.:
     $ docker run -p 80:80 -p 443:443 -d mysite
 
 
+Notable environment variables
+-----------------------------
+
+**FALLTHROUGH**
+
+If this is set to any value, unknown urls will be served by `/index.html`. This is useful if your
+single page app uses browser routing.
+
+
+
 nginx.conf
 ---------
 
 The nginx.conf and mime.types are pulled with slight modifications from
 the h5bp Nginx HTTP server boilerplate configs project at
 https://github.com/h5bp/server-configs-nginx
+
 
 Customized configs
 ------------------
