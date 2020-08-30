@@ -2,10 +2,14 @@ FROM nginx:1.19
 ENV DOCKERIZE_VERSION=v0.6.1
 MAINTAINER Kyle Mathews "mathews.kyle@gmail.com 
 
+# Using config from https://github.com/h5bp/server-configs-nginx/
 RUN rm /etc/nginx/nginx.conf /etc/nginx/mime.types
+COPY mime.types /etc/nginx/mime.types
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY basic.conf /etc/nginx/basic.conf
-COPY mime.types /etc/nginx/mime.types
+
+
+
 RUN mkdir /etc/nginx/ssl
 COPY default /etc/nginx/sites-enabled/default
 COPY default-ssl /etc/nginx/sites-available/default-ssl
