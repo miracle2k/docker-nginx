@@ -1,6 +1,5 @@
 FROM nginx:1.17
 ENV DOCKERIZE_VERSION=v0.6.1
-ENV FOO=1
 MAINTAINER Kyle Mathews "mathews.kyle@gmail.com 
 
 RUN rm /etc/nginx/nginx.conf /etc/nginx/mime.types
