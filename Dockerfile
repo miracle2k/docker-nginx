@@ -1,4 +1,4 @@
-FROM nginx:1.17
+FROM nginx:1.19
 ENV DOCKERIZE_VERSION=v0.6.1
 MAINTAINER Kyle Mathews "mathews.kyle@gmail.com 
 
